@@ -1,0 +1,389 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #6b3737;
+    background: #f5f5f5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #34495e;
+    color: #ecf0f1;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    transition: max-height 0.3s ease-in-out;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #e74c3c;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#menu-toggle:checked + label + .menu {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px; 
+    background: #34495e;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+    max-height: none;
+    transition: max-height 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-height: 0; 
+        overflow: hidden; 
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #menu-toggle:checked + label + ul {
+        display: flex;
+    }
+}
+
+.hero h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.hero button {
+    font-size: 1rem;
+}
+
+.destinations h2 {
+    font-size: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.about-kerala h2 {
+    font-size: 2rem;
+}
+
+.about-content p {
+    font-size: 1rem;
+}
+
+.top-destinations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.top-destination-item {
+    flex: 1 1 30%;
+    margin: 10px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.about-kerala img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific adjustments for larger screens */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-kerala img {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero button {
+        font-size: 1.2rem;
+    }
+
+    .destinations h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-kerala h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-content p {
+        font-size: 1.1rem;
+    }
+
+    .about-kerala img {
+        max-width: 50%; 
+    }
+}
+
+.hero {
+    background: url('https://as2.ftcdn.net/v2/jpg/06/41/55/87/1000_F_641558762_NSA5sf5mgLWZabgALXO7h1TsyTUUU6WV.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    margin: 10px;
+    padding: 15px 30px;
+    border: none;
+    background: #e74c3c;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.hero button:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+.destinations {
+    padding: 40px 20px;
+    background: #e5f2f2;
+}
+
+.destinations h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #34495e;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.grid-item {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.grid-item h3 {
+    padding: 15px;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+
+.about-kerala {
+    padding: 40px 20px;
+    background: #f5f5f5;
+}
+
+.about-kerala h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #040404;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.about-content img {
+    max-width: 30%;
+    height: auto;
+    border-radius: 10px;
+    flex: 1 1 40%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content p {
+    flex: 1 1 55%;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #000000;
+    padding: 10px 20px;
+}
+
+
+.form-section {
+    padding: 40px 20px;
+    background: #ecf0f1;
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #34495e;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+form input, form select, form button {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+form button {
+    background: #27ae60;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background: #2ecc71;
+    transform: translateY(-2px);
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #34495e;
+    color: #ecf0f1;
+    margin-top: 20px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Tourism</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/Kerala_God's_Own_Country_Logo.svg.png" alt="Kerala Tourism Logo">
+        </div>
+        <nav>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Districts</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Sign Up</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>COME AND ENJOY OUR CULTURE</h1>
+            <button>LEARN MORE</button>
+            <button>CONTACT US</button>
+        </section>
+        <section class="destinations">
+            <h2>TOP DESTINATIONS</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="images/VAGAMON.jpg" alt="Vagamon">
+                    <h3>VAGAMON</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="images/KOVALAM.jpg" alt="Kovalam">
+                    <h3>KOVALAM</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="images/KOZHIKODE.jpg" alt="KOZHIKODE">
+                    <h3>KOZHIKODE</h3>
+                </div>
+                <div class="grid-item">
+                    <img src="images/Illikkal.jpg" alt="Illickal Kallu">
+                    <h3>Illickal Kallu</h3>
+                </div>
+            </div>
+        </section>
+        <section class="about-kerala">
+            <h2>ABOUT KERALA</h2>
+            <div class="about-content">
+                <img src="images/KERALAMAP.jpg" alt="Kerala Map">
+                <p>Kerala, a state on India's tropical Malabar Coast, has nearly 600km of Arabian Sea shoreline. It's known for its palm-lined beaches and backwaters, a network of canals. Inland are the Western Ghats, mountains whose slopes support tea, coffee and spice plantations as well as wildlife. National parks like Eravikulam and Periyar, plus Wayanad and other sanctuaries, are home to elephants, langur monkeys and tigers</p>
+            </div>
+        </section>
+        <section class="form-section">
+            <h2>ENQUIRY FOR BOOKING</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email ID:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+                <label for="district">Select the District:</label>
+                <select id="district" name="district" required>
+                    <option value="">Choose one</option>
+                    <option value="trivandrum">Thiruvananthapuram</option>
+                    <option value="kasargod">Kasargod</option>
+                    <option value="kottayam">Kottayam</option>
+                    <option value="wayanad">Wayanad</option>
+                    <option value="ernakulam">Ernakulam</option>
+                    <option value="palakad">Palakad</option>
+                    <option value="kozhikode">Kozhikode</option>
+                    <option value="kannur">Kannur</option>
+                    <option value="malappuram">Malappuram</option>
+                    <option value="thrissur">Thrissur</option>
+                    <option value="idukki">Idukki</option>
+                    <option value="kollam">Kollam</option>
+                    <option value="pathanamthitta">Pathanamthitta</option>
+                    <option value="alappuzha">Alappuzha</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Kerala Tourism(Ayaaz). All rights reserved.</p>
+    </footer>
+</body>
+</html>
